@@ -9,7 +9,9 @@ import (
 )
 
 const (
-	POST = "POST"
+	POST   = "POST"
+	GET    = "GET"
+	DELETE = "DELETE"
 )
 
 func main() {
@@ -18,6 +20,9 @@ func main() {
 
 	//AddInfo create new rout with POST method
 	router.HandleFunc("/info", handleFunc.AddInfo).Methods(POST)
+
+	//GetAllInfos create new rout with GET method
+	router.HandleFunc("/allInfos", handleFunc.GetAllInfo).Methods(GET)
 
 	fmt.Println("server is ready")
 	if err := http.ListenAndServe(port, router); err != nil {

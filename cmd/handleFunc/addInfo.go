@@ -19,5 +19,5 @@ func AddInfo(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	response := services.AddInfo(request)
-	response.WithJson(w, "labelPath")
+	response.WithJson(w, "AddInfo")
 }
