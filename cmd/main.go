@@ -1,8 +1,9 @@
-package cmd
+package main
 
 import (
 	"fmt"
 	"github.com/gorilla/mux"
+	"info/cmd/handleFunc"
 	"log"
 	"net/http"
 )
