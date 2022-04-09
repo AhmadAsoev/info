@@ -27,6 +27,9 @@ func main() {
 	//GetInfosByName create new rout with Get method
 	router.HandleFunc("/infosBy/{name}", handleFunc.GetInfosByName).Methods(GET)
 
+	//DeleteById create new rout delete by id with Delete method
+	router.HandleFunc("/infosBy/{id}", handleFunc.DeleteInfosById).Methods(DELETE)
+
 	fmt.Println("server is ready")
 	if err := http.ListenAndServe(port, router); err != nil {
 		log.Fatal("Server is not ready")
